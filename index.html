@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>jakedev portfolio</title>
+<title>jakedev</title>
 
 <style>
 body {
@@ -11,18 +11,18 @@ body {
   font-family: Arial, sans-serif;
   background: black;
   color: white;
-  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
-/* Top bar */
+/* NAV */
 .navbar {
   position: fixed;
   top: 0;
   width: 100%;
-  background: rgba(20,20,20,0.9);
+  background: rgba(15,15,15,0.85);
   display: flex;
   justify-content: center;
-  gap: 30px;
+  gap: 25px;
   padding: 15px;
   z-index: 1000;
 }
@@ -37,43 +37,42 @@ body {
   color: #00aaff;
 }
 
-/* Sections */
+/* SECTIONS */
 section {
-  padding: 100px 20px;
+  padding: 120px 20px;
   max-width: 900px;
   margin: auto;
 }
 
-/* Hero */
+/* HERO */
 .hero {
   text-align: center;
-  padding-top: 140px;
+  padding-top: 160px;
 }
 
 .hero h1 {
-  font-size: 40px;
+  font-size: 50px;
 }
 
 .glow {
   color: #00aaff;
+  text-shadow: 0 0 10px #00aaff;
 }
 
-/* Boxes */
+/* BOXES */
 .box {
   background: #111;
   padding: 20px;
   margin: 15px 0;
-  border-radius: 10px;
+  border-radius: 12px;
 }
 
-/* Button */
+/* BUTTON */
 .button {
   background: #5865F2;
   color: white;
   padding: 10px 15px;
-  border: none;
   border-radius: 8px;
-  cursor: pointer;
   text-decoration: none;
   display: inline-block;
 }
@@ -82,16 +81,36 @@ section {
   background: #4752c4;
 }
 
-/* Fake “Roblox vibe animation” */
-.roblox-glow {
-  font-size: 20px;
-  color: #ff2d2d;
-  animation: glow 2s infinite alternate;
+/* ROBUX FALLING BACKGROUND */
+#robux-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
 }
 
-@keyframes glow {
-  from { text-shadow: 0 0 10px red; }
-  to { text-shadow: 0 0 20px white; }
+.robux {
+  position: absolute;
+  top: -50px;
+  color: #00ff99;
+  font-size: 20px;
+  animation: fall linear infinite;
+  opacity: 0.7;
+}
+
+@keyframes fall {
+  0% { transform: translateY(-50px); }
+  100% { transform: translateY(110vh); }
+}
+
+/* CONTENT ABOVE BACKGROUND */
+.content {
+  position: relative;
+  z-index: 1;
 }
 </style>
 
@@ -99,20 +118,28 @@ section {
 
 <body>
 
+<!-- ROBUX BACKGROUND -->
+
+<div id="robux-container"></div>
+
 <!-- NAV -->
 
 <div class="navbar">
   <a href="#home">Home</a>
   <a href="#services">Services</a>
+  <a href="#about">Dev More</a>
   <a href="#reviews">Reviews</a>
   <a href="#contact">Contact</a>
 </div>
 
+<div class="content">
+
 <!-- HERO -->
 
 <section id="home" class="hero">
-  <h1><span class="glow">jakedev</span> Roblox Scripter</h1>
-  <p class="roblox-glow">💻 Creating Roblox systems & UI</p>
+  <h1><span class="glow">jakedev</span></h1>
+  <p>Roblox Scripter • UI • Systems • Gamepass setups</p>
+  <p style="color:#00ff99;">💰 Robux Only</p>
 </section>
 
 <!-- SERVICES -->
@@ -120,23 +147,23 @@ section {
 <section id="services">
   <h2>Services</h2>
 
+  <div class="box">UI systems (shops, menus, buttons)</div>
+  <div class="box">Gamepass systems</div>
+  <div class="box">Inventory systems</div>
+  <div class="box">Datastore saving</div>
+  <div class="box">Leaderstats (coins, points)</div>
+  <div class="box">Notifications / popups</div>
+</section>
+
+<!-- DEV MORE -->
+
+<section id="about">
+  <h2>Dev More</h2>
+
   <div class="box">
-    • UI systems (shops, menus, buttons)
-  </div>
-  <div class="box">
-    • Gamepass systems
-  </div>
-  <div class="box">
-    • Inventory / item systems
-  </div>
-  <div class="box">
-    • Datastore saving
-  </div>
-  <div class="box">
-    • Leaderstats (coins, points)
-  </div>
-  <div class="box">
-    • Notifications / popups
+    I build clean Roblox systems focused on performance and UI design.
+    <br><br>
+    My goal is to make smooth, simple, and functional game systems.
   </div>
 </section>
 
@@ -146,25 +173,25 @@ section {
   <h2>Reviews</h2>
 
   <div class="box">
-    ⭐⭐⭐⭐⭐  
-    "💻 Roblox Scripter For Hire
+    ⭐⭐⭐⭐⭐
+    <br><br>
+    💻 Roblox Scripter For Hire
 
 ```
+<br><br>
 Roblox scripter available for commissions.
 
+<br><br>
 Can create:
-• UI systems (shops, menus, buttons)
-• Gamepass systems
-• Inventory / item select systems
-• Simple datastore saving
-• Leaderstats (coins, points, etc.)
-• Simple notification / popup systems
-• Interact buttons / click systems
+• UI systems (shops, menus, buttons)<br>
+• Gamepass systems<br>
+• Inventory / item select systems<br>
+• Simple datastore saving<br>
+• Leaderstats (coins, points, etc.)<br>
+• Simple notification / popup systems<br>
+• Interact buttons / click systems<br><br>
 
 Payment: Robux only
-Prices depend on project size.
-
-DM me with your idea and I’ll let you know if I can do it."
 ```
 
   </div>
@@ -178,11 +205,40 @@ DM me with your idea and I’ll let you know if I can do it."
 
   <div class="box">
     <p>Discord: jake070687</p>
-    <a class="button" href="https://discord.com" target="_blank">
-      Message Me
-    </a>
+
+```
+<a class="button" href="https://discord.com" target="_blank">
+  Message Me
+</a>
+```
+
   </div>
 </section>
+
+</div>
+
+<script>
+// ROBUX FALLING ANIMATION
+const container = document.getElementById("robux-container");
+
+function createRobux() {
+  const robux = document.createElement("div");
+  robux.classList.add("robux");
+  robux.innerText = "R$";
+
+  robux.style.left = Math.random() * 100 + "vw";
+  robux.style.animationDuration = (2 + Math.random() * 3) + "s";
+  robux.style.fontSize = (15 + Math.random() * 20) + "px";
+
+  container.appendChild(robux);
+
+  setTimeout(() => {
+    robux.remove();
+  }, 5000);
+}
+
+setInterval(createRobux, 200);
+</script>
 
 </body>
 </html>
