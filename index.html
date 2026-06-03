@@ -1,86 +1,188 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
 <head>
-  <title>Roblox Scripter Portfolio</title>
-  <style>
-    body {
-      font-family: Arial;
-      background: #0f0f0f;
-      color: white;
-      margin: 0;
-      padding: 0;
-    }
+<meta charset="UTF-8">
+<title>jakedev portfolio</title>
 
-```
-header {
-  background: #1f1f1f;
-  padding: 20px;
-  text-align: center;
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: black;
+  color: white;
+  scroll-behavior: smooth;
 }
 
-.container {
-  padding: 20px;
-  max-width: 800px;
+/* Top bar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(20,20,20,0.9);
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 15px;
+  z-index: 1000;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  color: #00aaff;
+}
+
+/* Sections */
+section {
+  padding: 100px 20px;
+  max-width: 900px;
   margin: auto;
 }
 
+/* Hero */
+.hero {
+  text-align: center;
+  padding-top: 140px;
+}
+
+.hero h1 {
+  font-size: 40px;
+}
+
+.glow {
+  color: #00aaff;
+}
+
+/* Boxes */
 .box {
-  background: #2a2a2a;
-  padding: 15px;
-  margin: 10px 0;
+  background: #111;
+  padding: 20px;
+  margin: 15px 0;
   border-radius: 10px;
 }
 
-.tag {
+/* Button */
+.button {
+  background: #5865F2;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
   display: inline-block;
-  background: #444;
-  padding: 5px 10px;
-  margin: 5px;
-  border-radius: 5px;
-  font-size: 12px;
 }
-```
 
-  </style>
+.button:hover {
+  background: #4752c4;
+}
+
+/* Fake “Roblox vibe animation” */
+.roblox-glow {
+  font-size: 20px;
+  color: #ff2d2d;
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 10px red; }
+  to { text-shadow: 0 0 20px white; }
+}
+</style>
+
 </head>
 
 <body>
 
-<header>
-  <h1>Roblox Scripter For Hire</h1>
-  <p>UI • Gamepasses • Datastores • Systems</p>
-</header>
+<!-- NAV -->
 
-<div class="container">
-
-  <div class="box">
-    <h2>About Me</h2>
-    <p>I create Roblox systems like shops, UI, leaderstats, and gamepass integrations.</p>
-  </div>
-
-  <div class="box">
-    <h2>Skills</h2>
-    <span class="tag">UI Systems</span>
-    <span class="tag">Gamepasses</span>
-    <span class="tag">Datastores</span>
-    <span class="tag">Leaderstats</span>
-    <span class="tag">Menus</span>
-  </div>
-
-  <div class="box">
-    <h2>Past Work</h2>
-    <p>• Shop UI system</p>
-    <p>• Gamepass shop setup</p>
-    <p>• Leaderstats coins system</p>
-  </div>
-
-  <div class="box">
-    <h2>Contact</h2>
-    <p>DM me on Discord: yourname</p>
-  </div>
-
+<div class="navbar">
+  <a href="#home">Home</a>
+  <a href="#services">Services</a>
+  <a href="#reviews">Reviews</a>
+  <a href="#contact">Contact</a>
 </div>
+
+<!-- HERO -->
+
+<section id="home" class="hero">
+  <h1><span class="glow">jakedev</span> Roblox Scripter</h1>
+  <p class="roblox-glow">💻 Creating Roblox systems & UI</p>
+</section>
+
+<!-- SERVICES -->
+
+<section id="services">
+  <h2>Services</h2>
+
+  <div class="box">
+    • UI systems (shops, menus, buttons)
+  </div>
+  <div class="box">
+    • Gamepass systems
+  </div>
+  <div class="box">
+    • Inventory / item systems
+  </div>
+  <div class="box">
+    • Datastore saving
+  </div>
+  <div class="box">
+    • Leaderstats (coins, points)
+  </div>
+  <div class="box">
+    • Notifications / popups
+  </div>
+</section>
+
+<!-- REVIEWS -->
+
+<section id="reviews">
+  <h2>Reviews</h2>
+
+  <div class="box">
+    ⭐⭐⭐⭐⭐  
+    "💻 Roblox Scripter For Hire
+
+```
+Roblox scripter available for commissions.
+
+Can create:
+• UI systems (shops, menus, buttons)
+• Gamepass systems
+• Inventory / item select systems
+• Simple datastore saving
+• Leaderstats (coins, points, etc.)
+• Simple notification / popup systems
+• Interact buttons / click systems
+
+Payment: Robux only
+Prices depend on project size.
+
+DM me with your idea and I’ll let you know if I can do it."
+```
+
+  </div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+  <h2>Contact</h2>
+
+  <div class="box">
+    <p>Discord: jake070687</p>
+    <a class="button" href="https://discord.com" target="_blank">
+      Message Me
+    </a>
+  </div>
+</section>
 
 </body>
 </html>
