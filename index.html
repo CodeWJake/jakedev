@@ -1,4 +1,117 @@
-<!-- NAV -->
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>jakedev</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: black;
+  color: white;
+  overflow-x: hidden;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(15,15,15,0.85);
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  padding: 15px;
+  z-index: 1000;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  color: #00aaff;
+}
+
+section {
+  padding: 120px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.hero {
+  text-align: center;
+  padding-top: 160px;
+}
+
+.hero h1 {
+  font-size: 50px;
+}
+
+.glow {
+  color: #00aaff;
+  text-shadow: 0 0 10px #00aaff;
+}
+
+.box {
+  background: #111;
+  padding: 20px;
+  margin: 15px 0;
+  border-radius: 12px;
+}
+
+.button {
+  background: #5865F2;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.button:hover {
+  background: #4752c4;
+}
+
+#robux-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.robux {
+  position: absolute;
+  top: -50px;
+  color: #00ff99;
+  font-size: 20px;
+  animation: fall linear infinite;
+  opacity: 0.7;
+}
+
+@keyframes fall {
+  0% { transform: translateY(-50px); }
+  100% { transform: translateY(110vh); }
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+}
+</style>
+
+</head>
+
+<body>
+
+<div id="robux-container"></div>
 
 <div class="navbar">
   <a href="#home">Home</a>
@@ -9,28 +122,59 @@
   <a href="#contact">Contact</a>
 </div>
 
-<!-- ACTIVE JOBS -->
+<div class="content">
+
+<section id="home" class="hero">
+  <h1><span class="glow">jakedev</span></h1>
+  <p>Roblox Scripter • UI Systems • Game Systems</p>
+  <p style="color:#00ff99;">💰 Robux Only</p>
+</section>
+
+<section id="services">
+  <h2>Services</h2>
+
+  <div class="box">UI systems (shops, menus, buttons)</div>
+  <div class="box">Gamepass systems</div>
+  <div class="box">Inventory systems</div>
+  <div class="box">Datastore saving</div>
+  <div class="box">Leaderstats (coins, points)</div>
+  <div class="box">Notifications / popups</div>
+</section>
+
+<section id="about">
+  <h2>Dev More</h2>
+
+  <div class="box">
+    <h3>🎮 Gamepasses</h3>
+    <p>I can create full gamepass systems including perks, UI integration, and automatic checking.</p>
+    <p>Examples: VIP access, speed boosts, special items, shop unlocks.</p>
+  </div>
+
+  <div class="box">
+    <h3>⚙️ Game Functions</h3>
+    <p>I build core gameplay systems that make your game functional and smooth.</p>
+    <p>Examples: leaderstats, saving systems, UI interaction systems, and simple mechanics.</p>
+  </div>
+</section>
 
 <section id="jobs">
   <h2>Active Jobs</h2>
 
   <div class="box">
     <h3>🏛 Parliament Voting System</h3>
-    <p>Creating a dynamic voting system with Aye/Nay voting, vote counting, and reset functionality.</p>
+    <p>Dynamic voting system with Aye, Nay and vote reset functionality.</p>
   </div>
 
   <div class="box">
     <h3>🔫 Special Gun Gamepasses</h3>
-    <p>Developing custom gamepasses with exclusive weapons, ownership checks, and purchase UI.</p>
+    <p>Exclusive weapon gamepasses with custom UI and ownership checks.</p>
   </div>
 
   <div class="box">
     <h3>🎰 Reward Spinner</h3>
-    <p>Building a reward spinner with prizes such as StaatsMark, pistols, and other rewards.</p>
+    <p>Reward spinner system featuring StaatsMark, pistols and special rewards.</p>
   </div>
 </section>
-
-<!-- REVIEWS -->
 
 <section id="reviews">
   <h2>Reviews</h2>
@@ -57,11 +201,11 @@ Known for clean, fast, and reliable scripting results.
 ```
 <b>@fuzzy_gumnut</b><br><br>
 
-Jake created multiple gamepass systems for my game and completed everything exactly as requested.<br><br>
+Jake created several gamepass systems for my project and delivered exactly what was promised.<br><br>
 
-The systems worked perfectly, looked professional, and were easy to manage afterwards.<br><br>
+Everything worked smoothly, looked professional and was easy to set up.<br><br>
 
-Great knowledge of Roblox scripting, UI systems, and game functionality. Fast delivery and easy communication throughout the project.
+Great Roblox scripter with strong knowledge of gamepasses, UI systems and game functionality.
 ```
 
   </div>
@@ -70,14 +214,56 @@ Great knowledge of Roblox scripting, UI systems, and game functionality. Fast de
     ⭐⭐⭐⭐⭐<br><br>
 
 ```
-<b>@PixelBuilder</b><br><br>
+<b>@BuilderMax</b><br><br>
 
-Excellent work on leaderstats, datastore saving, and UI interactions.<br><br>
+Fast turnaround and high quality work.<br><br>
 
-Everything was completed quickly and worked first time with very little adjustment needed.<br><br>
+Jake helped with inventory systems and datastore functionality while keeping everything organised and efficient.<br><br>
 
-Highly recommended for reliable Roblox scripting and game system development.
+Would definitely work with him again.
 ```
 
   </div>
 </section>
+
+<section id="contact">
+  <h2>Contact</h2>
+
+  <div class="box">
+    <p>Discord: jake070687</p>
+
+```
+<a class="button" href="https://discord.com" target="_blank">
+  Message Me
+</a>
+```
+
+  </div>
+</section>
+
+</div>
+
+<script>
+const container = document.getElementById("robux-container");
+
+function createRobux() {
+  const robux = document.createElement("div");
+  robux.classList.add("robux");
+  robux.innerText = "R$";
+
+  robux.style.left = Math.random() * 100 + "vw";
+  robux.style.animationDuration = (2 + Math.random() * 3) + "s";
+  robux.style.fontSize = (15 + Math.random() * 20) + "px";
+
+  container.appendChild(robux);
+
+  setTimeout(() => {
+    robux.remove();
+  }, 5000);
+}
+
+setInterval(createRobux, 200);
+</script>
+
+</body>
+</html>
