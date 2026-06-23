@@ -1,269 +1,146 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>jakedev</title>
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JakeDev | Roblox Development</title>
 <style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: black;
-  color: white;
-  overflow-x: hidden;
-}
-
-.navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: rgba(15,15,15,0.85);
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-  padding: 15px;
-  z-index: 1000;
-}
-
-.navbar a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.navbar a:hover {
-  color: #00aaff;
-}
-
-section {
-  padding: 120px 20px;
-  max-width: 900px;
-  margin: auto;
-}
-
-.hero {
-  text-align: center;
-  padding-top: 160px;
-}
-
-.hero h1 {
-  font-size: 50px;
-}
-
-.glow {
-  color: #00aaff;
-  text-shadow: 0 0 10px #00aaff;
-}
-
-.box {
-  background: #111;
-  padding: 20px;
-  margin: 15px 0;
-  border-radius: 12px;
-}
-
-.button {
-  background: #5865F2;
-  color: white;
-  padding: 10px 15px;
-  border-radius: 8px;
-  text-decoration: none;
-  display: inline-block;
-}
-
-.button:hover {
-  background: #4752c4;
-}
-
-#robux-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  overflow: hidden;
-  z-index: 0;
-}
-
-.robux {
-  position: absolute;
-  top: -50px;
-  color: #00ff99;
-  font-size: 20px;
-  animation: fall linear infinite;
-  opacity: 0.7;
-}
-
-@keyframes fall {
-  0% { transform: translateY(-50px); }
-  100% { transform: translateY(110vh); }
-}
-
-.content {
-  position: relative;
-  z-index: 1;
-}
+*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
+body{font-family:Arial,sans-serif;background:#050505;color:#fff;overflow-x:hidden}
+#robux-container{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:0}
+.robux{position:absolute;top:-50px;color:#00ff99;opacity:.35;animation:fall linear infinite}
+@keyframes fall{from{transform:translateY(-50px)}to{transform:translateY(110vh)}}
+.navbar{position:fixed;top:0;width:100%;display:flex;justify-content:center;gap:20px;padding:16px;background:rgba(0,0,0,.88);backdrop-filter:blur(10px);z-index:999}
+.navbar a{text-decoration:none;color:#fff;font-weight:bold}
+.navbar a:hover{color:#00aaff}
+.content{position:relative;z-index:1}
+section{max-width:1100px;margin:auto;padding:110px 20px}
+.hero{text-align:center;padding-top:170px}
+.hero h1{font-size:72px}
+.glow{color:#00aaff;text-shadow:0 0 18px #00aaff}
+.hero p{margin-top:12px}
+.btn{display:inline-block;margin:10px;padding:12px 20px;border-radius:10px;background:#5865F2;color:#fff;text-decoration:none;font-weight:bold}
+.btn.alt{background:#00aaff}
+h2{text-align:center;margin-bottom:30px;font-size:36px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
+.box{background:#111;border:1px solid #222;padding:22px;border-radius:14px}
+.box:hover{border-color:#00aaff}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:18px}
+.stat{background:#111;padding:20px;border-radius:14px;text-align:center}
+.stat h3{color:#00aaff;font-size:32px}
+footer{text-align:center;padding:40px;opacity:.7}
 </style>
-
 </head>
-
 <body>
-
 <div id="robux-container"></div>
 
 <div class="navbar">
-  <a href="#home">Home</a>
-  <a href="#services">Services</a>
-  <a href="#about">Dev More</a>
-  <a href="#jobs">Active Jobs</a>
-  <a href="#reviews">Reviews</a>
-  <a href="#contact">Contact</a>
+<a href="#home">Home</a>
+<a href="#services">Services</a>
+<a href="#work">Job Well Done</a>
+<a href="#projects">Active Jobs</a>
+<a href="#reviews">Reviews</a>
+<a href="#contact">Contact</a>
 </div>
 
 <div class="content">
 
 <section id="home" class="hero">
-  <h1><span class="glow">jakedev</span></h1>
-  <p>Roblox Scripter • UI Systems • Game Systems</p>
-  <p style="color:#00ff99;">💰 Robux Only</p>
+<h1><span class="glow">JakeDev</span></h1>
+<p>Professional Roblox Scripting & System Development</p>
+<p>UI Systems • Gamepasses • Datastores • Trading • Inventories • Combat Systems</p>
+<p style="color:#00ff99;font-weight:bold">Robux Payments Accepted</p>
+<a class="btn" href="#contact">Hire Me</a>
+<a class="btn alt" target="_blank" href="https://www.roblox.com/catalog/5738756339/Trade">Trade Gamepass</a>
+</section>
+
+<section>
+<h2>Development Overview</h2>
+<div class="stats">
+<div class="stat"><h3>20+</h3><p>Systems Built</p></div>
+<div class="stat"><h3>Fast</h3><p>Delivery</p></div>
+<div class="stat"><h3>Custom</h3><p>Solutions</p></div>
+<div class="stat"><h3>Reliable</h3><p>Support</p></div>
+</div>
 </section>
 
 <section id="services">
-  <h2>Services</h2>
-
-  <div class="box">UI systems (shops, menus, buttons)</div>
-  <div class="box">Gamepass systems</div>
-  <div class="box">Inventory systems</div>
-  <div class="box">Datastore saving</div>
-  <div class="box">Leaderstats (coins, points)</div>
-  <div class="box">Notifications / popups</div>
+<h2>Services</h2>
+<div class="grid">
+<div class="box">UI Systems (shops, menus, settings, inventories)</div>
+<div class="box">Gamepass Systems</div>
+<div class="box">Inventory Systems</div>
+<div class="box">Datastore Saving</div>
+<div class="box">Leaderstats & Progression</div>
+<div class="box">Trading Systems</div>
+<div class="box">Combat Systems</div>
+<div class="box">Reward Spinners & Daily Rewards</div>
+<div class="box">Voting & Parliament Systems</div>
+</div>
 </section>
 
-<section id="about">
-  <h2>Dev More</h2>
-
-  <div class="box">
-    <h3>🎮 Gamepasses</h3>
-    <p>I can create full gamepass systems including perks, UI integration, and automatic checking.</p>
-    <p>Examples: VIP access, speed boosts, special items, shop unlocks.</p>
-  </div>
-
-  <div class="box">
-    <h3>⚙️ Game Functions</h3>
-    <p>I build core gameplay systems that make your game functional and smooth.</p>
-    <p>Examples: leaderstats, saving systems, UI interaction systems, and simple mechanics.</p>
-  </div>
+<section id="work">
+<h2>Job Well Done</h2>
+<div class="grid">
+<div class="box"><h3>Trading System</h3><p>Secure trading with validation and UI integration.</p></div>
+<div class="box"><h3>Inventory Framework</h3><p>Persistent inventory systems with saving/loading.</p></div>
+<div class="box"><h3>Combat Systems</h3><p>Custom combat mechanics and balancing.</p></div>
+<div class="box"><h3>Gamepass Integration</h3><p>Premium content and ownership checks.</p></div>
+</div>
 </section>
 
-<section id="jobs">
-  <h2>Active Jobs</h2>
+<section id="projects">
+<h2>Active Jobs</h2>
+<div class="grid">
+<div class="box"><h3>🏛 Parliament Voting System</h3><p>Dynamic voting with Aye, Nay and reset functions.</p></div>
+<div class="box"><h3>🔫 Special Gun Gamepasses</h3><p>Exclusive premium weapon systems.</p></div>
+<div class="box"><h3>🎰 Reward Spinner</h3><p>Prize spinner featuring multiple reward types.</p></div>
+</div>
+</section>
 
-  <div class="box">
-    <h3>🏛 Parliament Voting System</h3>
-    <p>Dynamic voting system with Aye, Nay and vote reset functionality.</p>
-  </div>
-
-  <div class="box">
-    <h3>🔫 Special Gun Gamepasses</h3>
-    <p>Exclusive weapon gamepasses with custom UI and ownership checks.</p>
-  </div>
-
-  <div class="box">
-    <h3>🎰 Reward Spinner</h3>
-    <p>Reward spinner system featuring StaatsMark, pistols and special rewards.</p>
-  </div>
+<section>
+<h2>Featured Gamepass</h2>
+<div class="box">
+<h3>🎟 Trade</h3>
+<p>Roblox Trade Gamepass integration example.</p><br>
+<a class="btn" target="_blank" href="https://www.roblox.com/catalog/5738756339/Trade">View Gamepass</a>
+</div>
 </section>
 
 <section id="reviews">
-  <h2>Reviews</h2>
-
-  <div class="box">
-    ⭐⭐⭐⭐⭐<br><br>
-
-```
-<b>@farrisnewaccount</b><br><br>
-
-Good simple work, and Jake is very nice and understanding, and his prices are cheap!<br><br>
-
-With solid scripting and efficient quality work.<br>
-Specialising in gamepasses, UI building, and smooth Roblox systems.<br><br>
-
-Known for clean, fast, and reliable scripting results.
-```
-
-  </div>
-
-  <div class="box">
-    ⭐⭐⭐⭐⭐<br><br>
-
-```
-<b>@fuzzy_gumnut</b><br><br>
-
-Jake created several gamepass systems for my project and delivered exactly what was promised.<br><br>
-
-Everything worked smoothly, looked professional and was easy to set up.<br><br>
-
-Great Roblox scripter with strong knowledge of gamepasses, UI systems and game functionality.
-```
-
-  </div>
-
-  <div class="box">
-    ⭐⭐⭐⭐⭐<br><br>
-
-```
-<b>@BuilderMax</b><br><br>
-
-Fast turnaround and high quality work.<br><br>
-
-Jake helped with inventory systems and datastore functionality while keeping everything organised and efficient.<br><br>
-
-Would definitely work with him again.
-```
-
-  </div>
+<h2>Reviews</h2>
+<div class="grid">
+<div class="box">⭐⭐⭐⭐⭐<br><br><b>@farrisnewaccount</b><br><br>Good simple work, and Jake is very nice and understanding. Prices are fair and delivery was smooth.</div>
+<div class="box">⭐⭐⭐⭐⭐<br><br><b>@fuzzy_gumnut</b><br><br>Several systems were completed exactly as requested and worked well on delivery.</div>
+<div class="box">⭐⭐⭐⭐⭐<br><br><b>@BuilderMax</b><br><br>Fast turnaround and quality scripting work. Would work together again.</div>
+<div class="box">⭐⭐⭐⭐⭐<br><br><b>@kandoew_71411</b><br><br>Combat system came out exactly how I wanted, with no problems at all. Easy to communicate with and turned it around fast. Fair pricing too — would recommend.</div>
+<div class="box">⭐⭐⭐⭐⭐<br><br><b>@aguywhoslapeverything</b><br><br>Got my inventory system done really quickly and the code was clean. Even noticed and fixed something I hadn't mentioned. Definitely using again.</div>
+</div>
 </section>
 
 <section id="contact">
-  <h2>Contact</h2>
-
-  <div class="box">
-    <p>Discord: jake070687</p>
-
-```
-<a class="button" href="https://discord.com/users/1494309364645892158\" target="_blank">
-  Message Me
-</a>
-```
-
-  </div>
+<h2>Contact</h2>
+<div class="box">
+<p><b>Discord:</b> jake070687</p><br>
+<a class="btn" target="_blank" href="https://discord.com/users/1494309364645892158">Message Me</a>
+</div>
 </section>
 
+<footer>© 2026 JakeDev</footer>
 </div>
 
 <script>
-const container = document.getElementById("robux-container");
-
-function createRobux() {
-  const robux = document.createElement("div");
-  robux.classList.add("robux");
-  robux.innerText = "R$";
-
-  robux.style.left = Math.random() * 100 + "vw";
-  robux.style.animationDuration = (2 + Math.random() * 3) + "s";
-  robux.style.fontSize = (15 + Math.random() * 20) + "px";
-
-  container.appendChild(robux);
-
-  setTimeout(() => {
-    robux.remove();
-  }, 5000);
+const c=document.getElementById('robux-container');
+function r(){
+let e=document.createElement('div');
+e.className='robux';e.innerText='R$';
+e.style.left=Math.random()*100+'vw';
+e.style.fontSize=(14+Math.random()*18)+'px';
+e.style.animationDuration=(3+Math.random()*4)+'s';
+c.appendChild(e);
+setTimeout(()=>e.remove(),7000);
 }
-
-setInterval(createRobux, 200);
+setInterval(r,250);
 </script>
-
 </body>
 </html>
